@@ -49,3 +49,72 @@ const navSlide = () => {
 }
 
 navSlide();
+let counter = 1;
+
+
+    const rateSlide = document.querySelector('.rate-slide');
+    const rateItems = document.querySelectorAll('.rates');
+
+    //counter
+    
+    const size = rateItems[0].clientHeight;
+    //console.log(size);
+
+    rateSlide.style.transform = 'translateY(' + (-size * counter) +'px)';
+    //console.log(rateSlide.style.transform);
+
+
+setInterval(function(){
+    counter++;
+   // console.log("interval",counter);
+    rateSlide.style.transition = 'transform 0.3s ease-in-out';
+    rateSlide.style.transform = 'translateY(' + (-size * counter) +'px)';
+    if(rateItems[counter].id === 'firstClone'){
+        rateSlide.style.transition = 'none';
+        counter = 1;
+        //console.log("slide",counter);
+        rateSlide.style.transform = 'translateY(' + (-size * counter) +'px)';
+        
+       }
+    //console.log(rateSlide.style.transform);
+},2000);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".image", {
+    scrollTrigger: {
+        trigger:'.image',
+        start:"top center",
+    },
+    x:-500,
+    opacity: 0,
+    duration:1.5
+})
+gsap.from(".media-details", {
+    scrollTrigger: {
+        trigger:'.image',
+        start:"top center",
+    },
+    x:500,
+    opacity: 0,
+    duration:1.5
+});
+gsap.from(".buy-section", {
+    scrollTrigger: {
+        trigger:'.buy-section',
+        start:"top center",
+    },
+    y:-200,
+    opacity: 0,
+    duration:1.5
+});
+gsap.from(".main", {
+    scrollTrigger: {
+        trigger:'.main',
+        start:"top center",
+    },
+    y:-200,
+    opacity: 0,
+    duration:1.5
+});
+

@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -159,6 +165,7 @@ nav{
     justify-content: space-between;
     width: 80%;
     margin:0 auto;
+    padding: 1rem 0rem;
     @media (max-width:768px) {
         width: 95%;
         flex-direction: column;
@@ -300,3 +307,200 @@ nav{
     background: #2E2D28;
 }
 
+.buy{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+   
+}
+
+.buy-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+
+    @media (max-width:768px) {
+        width: 95%;
+    }
+    
+
+    h1{
+        color: #fff700;
+        font-size: 2.5rem;
+        font-weight: bold;
+
+    }
+    h3{
+        color: #fff;
+        font-size: 1rem;
+        opacity: 0.9;
+        margin-top: 2rem;
+    }
+    button{
+        margin-top: 2rem;
+    }
+
+    .rate-car{
+        width: 80%;
+        height: 180px;
+        overflow: hidden;
+        margin-top: 2rem;
+        @media (max-width:768px) {
+           height: 150px;
+        }
+    }
+
+    .rate-slide{
+       transition: transform 0.3s ease-in-out;
+    }
+
+    .rates{
+        margin-top: 0rem;
+        padding: 1rem 0;
+        width: 100%;
+        background: #fff700;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .rate{
+            color: black;
+           
+            h3{
+                color: black;
+                padding-bottom: .5rem;
+                font-size: 1.2rem;
+
+                @media (max-width:768px) {
+                    font-size: 0.7rem;
+                }
+                span{
+                    color: red;
+                }
+            }
+            h4,h5{
+                padding: .3rem;
+            }
+            h4{
+                font-size: 1rem;
+                @media (max-width:768px) {
+                    font-size: 0.5rem;
+                }
+            }
+            h5{
+                font-size: .8rem;
+                opacity: .8;
+                @media (max-width:768px) {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
+
+.media-section{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+
+    @media (max-width:768px) {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .image{
+        width: 60%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .media-details{
+        margin-left: 15rem;
+
+        @media (max-width:768px) {
+            margin-left: 0;
+        }
+        h1{
+            color: #fff700;
+            font-weight: bold;
+            padding-bottom: 2rem;
+        }
+        p{
+            color: #fff;
+            opacity: 0.8;
+            padding-bottom: 2rem;
+        }
+        .platforms{
+            display: flex;
+            flex-wrap: wrap;
+
+            .platform{
+                margin: 1rem;
+                text-align: center;
+                h6{
+                    margin-top: .5rem;
+                    font-size: 1rem;
+                    color: #fff;
+                }
+                img{
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background: #121212;
+    margin-top: 5rem;
+}
+
+.footer-section{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+
+    @media (max-width:768px) {
+        width: 95%;
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+
+        }
+
+        .col{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-right: 18rem;
+            @media (max-width:768px) {
+                margin-right: 0;
+                align-items: center;
+            }
+
+
+            h3{
+                color: #fff700;
+            }
+            p{
+                color: #fff;
+                margin: 0.2rem 0;
+            }
+        }
+    }
+}
